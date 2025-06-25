@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Leafloom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #3a7d44;
+            --secondary: #d4af37;
+            --accent: #6b8e23;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('p1.jpeg');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .weave-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233a7d44' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .leaf-decoration {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%233a7d44' d='M480 0c-17.7 0-32 14.3-32 32c0 41.7-52.5 80-128 80s-128-38.3-128-80c0-17.7-14.3-32-32-32s-32 14.3-32 32c0 61.9 50.1 112 112 112c47.4 0 87.7-29.4 103.8-70.6C296.3 143.4 320 171.2 320 208c0 44.2-35.8 80-80 80H160c-17.7 0-32 14.3-32 32s14.3 32 32 32h80c79.5 0 144-64.5 144-144c0-40.2-16.6-76.6-43.4-103.1C434.9 86.4 480 57.1 480 32c0-17.7-14.3-32-32-32z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .leaf-decoration.top-left {
+            top: 50px;
+            left: 50px;
+            transform: rotate(-15deg);
+        }
+        
+        .leaf-decoration.bottom-right {
+            bottom: 50px;
+            right: 50px;
+            transform: rotate(165deg);
+        }
+        
+        .content-section {
+            column-count: 2;
+            column-gap: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .content-section {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-green-700">Leafloom</span>
+                    <span class="ml-2 text-sm text-yellow-600 italic">Woven in green.</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Home</a>
+                        <a href="privacy.html" class="nav-link text-green-700 font-bold px-3 py-2 rounded-md text-sm font-medium transition duration-300" aria-current="page" tabindex="0">Privacy</a>
+                        <a href="terms.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Terms & Conditions</a>
+                        <a href="cookies.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Cookies</a>
+                        <a href="contact.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Contact Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-green-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero flex items-center justify-center text-center text-white relative">
+        <div class="leaf-decoration top-left"></div>
+        <div class="leaf-decoration bottom-right"></div>
+        <div class="px-4 py-16 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
+            <p class="text-xl md:text-2xl mb-8">Protecting your personal information is our priority</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="content-section">
+            <h2 class="text-3xl font-bold mb-6">Introduction</h2>
+            <p>At Leafloom, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. Please read this policy carefully to understand our practices regarding your personal data.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">1. Information We Collect</h3>
+            <p>We collect various types of information in connection with the services we provide, including personal information you provide directly, data about how you use our services, and information from third parties. This may include your name, email address, phone number, payment information, and other details necessary to provide our services.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">2. How We Use Your Information</h3>
+            <p>We use the information we collect to provide, maintain, and improve our services, to communicate with you, to process transactions, to prevent fraud, and for other legitimate business purposes. We may also use your information for marketing purposes with your consent.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">3. Information Sharing and Disclosure</h3>
+            <p>We do not sell your personal information. We may share your information with trusted third parties who assist us in operating our website, conducting our business, or servicing you, as long as those parties agree to keep this information confidential.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">4. Data Security</h3>
+            <p>We implement appropriate technical and organizational measures to protect the security of your personal information. However, no internet transmission or electronic storage is ever completely secure, so we cannot guarantee absolute security.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">5. Your Rights and Choices</h3>
+            <p>You have certain rights regarding your personal information, including the right to access, correct, or delete your data. You may also have the right to object to or restrict certain processing activities and to withdraw consent where applicable.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">6. Cookies and Tracking Technologies</h3>
+            <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">7. Third-Party Websites</h3>
+            <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any website you visit.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">8. Children's Privacy</h3>
+            <p>Our services are not directed to children under 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">9. International Data Transfers</h3>
+            <p>Your information may be transferred to and maintained on computers located outside of your state, province, country, or other governmental jurisdiction where data protection laws may differ from those in your jurisdiction.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">10. Data Retention</h3>
+            <p>We retain your personal information only for as long as necessary to provide you with our services and as described in this Privacy Policy. We may also retain information to comply with legal obligations, resolve disputes, and enforce our agreements.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">11. Changes to This Policy</h3>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "effective date" at the top of this policy.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">12. Contact Us</h3>
+            <p>If you have any questions about this Privacy Policy, please contact us using the information provided at the bottom of this page. We will respond to your inquiry as soon as possible.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">13. Legal Basis for Processing</h3>
+            <p>We process your personal information based on various legal grounds, including your consent, the necessity to perform a contract with you, compliance with legal obligations, and our legitimate business interests.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">14. Automated Decision Making</h3>
+            <p>We may use automated decision-making processes in some cases, such as for fraud prevention. If these decisions significantly affect you, you have the right to request human intervention or challenge the decision.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">15. Data Protection Officer</h3>
+            <p>We have appointed a Data Protection Officer (DPO) who oversees compliance with this Privacy Policy. You may contact our DPO regarding any questions or concerns about the processing of your personal information.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">16. Data Breach Notification</h3>
+            <p>In the event of a data breach that is likely to result in a risk to your rights and freedoms, we will notify you without undue delay and provide you with information about the breach and the measures we are taking to address it.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">17. User Consent</h3>
+            <p>By using our website, you consent to the collection and use of your personal information as outlined in this Privacy Policy. If you do not agree with our policies, please do not use our services.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">18. Data Minimization</h3>
+            <p>We adhere to the principle of data minimization, meaning we only collect personal information that is necessary for the purposes for which it is processed. We strive to limit the amount of data we collect to what is essential.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">19. Data Accuracy</h3>
+            <p>We take reasonable steps to ensure that the personal information we hold is accurate, complete, and up to date. You have the right to request corrections to your personal information if you believe it is inaccurate.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">20. Data Portability</h3>
+            <p>You have the right to request a copy of your personal information in a structured, commonly used, and machine-readable format. You may also request that we transfer your data to another organization where technically feasible.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">21. Right to Object</h3>
+            <p>You have the right to object to the processing of your personal information in certain circumstances, including when we process your data for direct marketing purposes. You can exercise this right at any time.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">22. Right to Restrict Processing</h3>
+            <p>You have the right to request that we restrict the processing of your personal information in certain situations, such as when you contest the accuracy of your data or when you have objected to processing.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">23. Right to Withdraw Consent</h3>
+            <p>If we process your personal information based on your consent, you have the right to withdraw that consent at any time. Withdrawal of consent will not affect the lawfulness of processing based on consent before its withdrawal.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">24. Third-Party Service Providers</h3>
+            <p>We may employ third-party companies and individuals to facilitate our services, provide the service on our behalf, perform service-related services, or assist us in analyzing how our services are used. These third parties have access to your personal information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">25. Marketing Communications</h3>
+            <p>We may use your personal information to contact you with newsletters, marketing or promotional materials, and other information that may be of interest to you. You can opt-out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">26. Changes to Your Personal Information</h3>
+            <p>If your personal information changes, or if you no longer wish to use our services, you may correct, update, or delete your information by contacting us. We will respond to your request within a reasonable timeframe.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">27. Privacy Policy for Employees</h3>
+            <p>This Privacy Policy also applies to our employees. We are committed to protecting the privacy of our employees and ensuring that their personal information is handled in accordance with applicable laws and regulations.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">28. Privacy Policy for Contractors</h3>
+            <p>Contractors who work with us are also required to comply with this Privacy Policy. We expect our contractors to respect the privacy of our users and adhere to applicable laws and regulations.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">29. Privacy Policy for Partners</h3>
+            <p>Our partners are required to comply with our privacy policy when they access our website. We expect our partners to respect the privacy of our users and adhere to applicable laws and regulations.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">30. Privacy Policy for Vendors</h3>
+            <p>Vendors who provide services to us may also have access to personal information. We require our vendors to comply with our privacy policy and protect the privacy of our users.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">31. Privacy Policy for Affiliates</h3>
+            <p>Affiliates who promote our services may also use personal information. We encourage our affiliates to disclose their privacy practices and ensure compliance with our privacy policy.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">32. Privacy Policy for Advertisers</h3>
+            <p>Advertisers who display ads on our website may use personal information to track user behavior. We encourage advertisers to provide transparency about their privacy practices and respect user privacy.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">33. Privacy Policy for Analytics Providers</h3>
+            <p>Analytics providers who help us understand user behavior may use personal information. We require our analytics providers to comply with our privacy policy and protect user data.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">34. Privacy Policy for Social Media Platforms</h3>
+            <p>Social media platforms that integrate with our website may use personal information. We encourage these platforms to disclose their privacy practices and respect user privacy.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">35. Privacy Policy for Third-Party Services</h3>
+            <p>Third-party services that we use may also collect personal information. We encourage these services to provide transparency about their privacy practices and ensure compliance with applicable laws.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">36. Privacy Policy for Mobile Apps</h3>
+            <p>If you access our services through a mobile app, personal information may also be collected. We encourage you to review the privacy policy of the mobile app for more information.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">37. Privacy Policy for Email Communications</h3>
+            <p>Personal information may also be used in our email communications to track engagement. We encourage you to review our privacy policy for more information on how we use personal information in email communications.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">38. Privacy Policy for Surveys</h3>
+            <p>If you participate in surveys on our website, personal information may be used to track your responses. We encourage you to review our privacy policy for more information on how we use personal information in surveys.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">39. Conclusion</h3>
+            <p>We hope this privacy policy has provided you with a clear understanding of how we handle your personal information. If you have any questions or concerns, please do not hesitate to contact us.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">40. Contact Information</h3>
+            <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+            <p>371 7th Ave, New York, NY 10001</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="text-center">
+            <p class="text-lg">Visit us at:</p>
+            <p class="text-xl font-bold">371 7th Ave, New York, NY 10001</p>
+            <p class="text-lg">Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+</body>
+</html>

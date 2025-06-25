@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - Leafloom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #3a7d44;
+            --secondary: #d4af37;
+            --accent: #6b8e23;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+        
+        .hero {
+   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('p1.jpeg');
+               background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .content-section {
+            column-count: 2;
+            column-gap: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .content-section {
+                column-count: 1;
+            }
+        }
+        
+        .leaf-decoration {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%233a7d44' d='M480 0c-17.7 0-32 14.3-32 32c0 41.7-52.5 80-128 80s-128-38.3-128-80c0-17.7-14.3-32-32-32s-32 14.3-32 32c0 61.9 50.1 112 112 112c47.4 0 87.7-29.4 103.8-70.6C296.3 143.4 320 171.2 320 208c0 44.2-35.8 80-80 80H160c-17.7 0-32 14.3-32 32s14.3 32 32 32h80c79.5 0 144-64.5 144-144c0-40.2-16.6-76.6-43.4-103.1C434.9 86.4 480 57.1 480 32c0-17.7-14.3-32-32-32z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .leaf-decoration.top-left {
+            top: 50px;
+            left: 50px;
+            transform: rotate(-15deg);
+        }
+        
+        .leaf-decoration.bottom-right {
+            bottom: 50px;
+            right: 50px;
+            transform: rotate(165deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-green-700">Leafloom</span>
+                    <span class="ml-2 text-sm text-yellow-600 italic">Woven in green.</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Home</a>
+                        <a href="privacy.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Privacy</a>
+                        <a href="terms.html" class="nav-link text-green-700 font-bold px-3 py-2 rounded-md text-sm font-medium transition duration-300" aria-current="page" tabindex="0">Terms & Conditions</a>
+                        <a href="cookies.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Cookies</a>
+                        <a href="contact.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Contact Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-green-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero flex items-center justify-center text-center text-white relative">
+        <div class="leaf-decoration top-left"></div>
+        <div class="leaf-decoration bottom-right"></div>
+        <div class="px-4 py-16 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Terms & Conditions</h1>
+            <p class="text-xl md:text-2xl mb-8">Please read these terms carefully before using our services</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="content-section">
+            <h2 class="text-3xl font-bold mb-6">Introduction</h2>
+            <p>These Terms and Conditions govern your use of the Leafloom website and services. By accessing or using our services, you agree to be bound by these terms. If you disagree with any part of these terms, please do not use our services.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">1. Acceptance of Terms</h3>
+            <p>By accessing or using our website, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. These terms apply to all visitors, users, and others who access or use the service.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">2. Changes to Terms</h3>
+            <p>We reserve the right to modify these terms at any time. We will provide notice of any changes by posting the updated terms on our website. Your continued use of the service after such changes constitutes acceptance of the new terms.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">3. User Responsibilities</h3>
+            <p>You agree to use our services only for lawful purposes and in a way that does not infringe the rights of, restrict or inhibit anyone else's use of the website. You are responsible for ensuring that all persons who access our website through you comply with these terms.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">4. Account Registration</h3>
+            <p>Some features may require account registration. You must provide accurate and complete information and keep your account information updated. You are responsible for maintaining the confidentiality of your account and password.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">5. Intellectual Property</h3>
+            <p>The service and its original content, features, and functionality are and will remain the exclusive property of Leafloom. Our trademarks and trade dress may not be used without our prior written consent.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">6. User Content</h3>
+            <p>Our service may allow you to post, link, store, share, and otherwise make available certain information. You retain all rights to any content you submit, post or display on or through the service.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">7. Prohibited Activities</h3>
+            <p>You may not engage in any activities that interfere with or disrupt the service. This includes attempting to bypass security measures, transmitting viruses, or engaging in any fraudulent, abusive, or illegal activities.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">8. Service Availability</h3>
+            <p>We strive to maintain the availability of our service, but we cannot guarantee uninterrupted service. We may perform maintenance or updates that temporarily limit access. We are not liable for any downtime or service interruptions.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">9. Termination</h3>
+            <p>We may terminate or suspend your account immediately, without notice or liability, for any reason whatsoever, including if you breach these Terms and Conditions. Upon termination, your right to use the service will immediately cease.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">10. Limitation of Liability</h3>
+            <p>In no event shall Leafloom be liable for any indirect, incidental, special, consequential or punitive damages resulting from your access to or use of the service. Our total liability shall not exceed the amount you paid us in the past six months.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">11. Indemnification</h3>
+            <p>You agree to defend, indemnify, and hold harmless Leafloom from any claims, liabilities, damages, losses, and expenses arising from your use of the service, your violation of these terms, or your violation of any third-party rights.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">12. Governing Law</h3>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law provisions. You agree to submit to the personal jurisdiction of these courts.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">13. Dispute Resolution</h3>
+            <p>Any disputes arising under these terms will first be addressed through direct negotiations. If a dispute cannot be resolved within 30 days, we agree to submit the dispute to mediation in New York before pursuing other remedies.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">14. Severability</h3>
+            <p>If any provision of these Terms is held to be invalid or unenforceable, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will remain in full force and effect.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">15. No Waiver</h3>
+            <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. Any waiver must be in writing and signed by an authorized representative of Leafloom.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">16. Entire Agreement</h3>
+            <p>These Terms constitute the entire agreement between you and Leafloom regarding our service and supersede any prior agreements. Any ambiguities in these terms shall be interpreted in favor of Leafloom.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">17. Contact Information</h3>
+            <p>If you have any questions about these Terms, please contact us at the address or phone number provided at the bottom of this page. We will make reasonable efforts to respond to your inquiry promptly.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">18. Payment Terms</h3>
+            <p>All payments for our services must be made in full at the time of purchase unless otherwise agreed in writing. We accept various payment methods and reserve the right to change our payment terms at any time.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">19. Refund Policy</h3>
+            <p>Refund requests must be submitted within 14 days of purchase. We reserve the right to approve or deny refunds at our discretion. Certain services may be non-refundable as specified at the time of purchase.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">20. Service Descriptions</h3>
+            <p>We make every effort to accurately describe our services. However, we cannot guarantee that all descriptions are complete, current, or error-free. If a service is not as described, your sole remedy is to request a refund.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">21. Age Restrictions</h3>
+            <p>Our services are intended for users who are at least 18 years old. By using our services, you represent that you are of legal age to form a binding contract with us.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">22. Third-Party Content</h3>
+            <p>Our service may contain links to third-party websites or services. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">23. Data Privacy</h3>
+            <p>Your use of our service is subject to our Privacy Policy, which explains how we collect, use, and protect your personal information. Please review our Privacy Policy carefully.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">24. Force Majeure</h3>
+            <p>We shall not be liable for any failure to perform our obligations under these terms if such failure results from circumstances beyond our reasonable control, including natural disasters or government actions.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">25. Assignment</h3>
+            <p>You may not assign or transfer these Terms without our prior written consent. We may assign our rights and obligations under these Terms without restriction.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">26. Feedback</h3>
+            <p>Any feedback, comments, or suggestions you provide regarding our service is entirely voluntary. We may use such feedback without restriction and without any obligation to compensate you.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">27. Modifications to Service</h3>
+            <p>We reserve the right to modify or discontinue our service at any time without notice. We shall not be liable for any modification, suspension, or discontinuance of the service.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">28. Accuracy of Information</h3>
+            <p>While we strive to provide accurate information, we cannot guarantee that all content on our website is current or complete. You acknowledge that reliance on such information is at your own risk.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">29. Customer Support</h3>
+            <p>We provide customer support during our normal business hours. Support response times may vary depending on the nature of your inquiry and current support volume.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">30. Professional Advice</h3>
+            <p>Content on our website is for informational purposes only and should not be considered professional advice. Always consult appropriate professionals for specific advice tailored to your situation <h3 class="text-2xl font-bold mt-8 mb-4">31. User Conduct</h3>
+            <p>You agree to use our services in a manner that is respectful and does not violate the rights of others. Any abusive or harassing behavior will not be tolerated and may result in account termination.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">32. Security of Your Information</h3>
+            <p>We take the security of your personal information seriously and implement measures to protect it. However, no method of transmission over the internet or method of electronic storage is 100% secure.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">33. Links to Other Websites</h3>
+            <p>Our website may contain links to third-party websites. We do not endorse or assume any responsibility for the content or practices of these websites. Please review their terms and privacy policies.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">34. Termination of Service</h3>
+            <p>We reserve the right to terminate or suspend your access to our services at our sole discretion, without notice, for conduct that we believe violates these Terms or is harmful to other users.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">35. No Partnership</h3>
+            <p>Nothing in these Terms shall be construed to create a partnership, joint venture, or agency relationship between you and Leafloom. You agree that you do not have any authority to bind us in any respect.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">36. Waiver of Rights</h3>
+            <p>Any failure by Leafloom to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision. Any waiver must be in writing and signed by an authorized representative.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">37. Contact Us</h3>
+            <p>If you have any questions about these Terms, please contact us at the address or phone number provided at the bottom of this page. We will make reasonable efforts to respond to your inquiry promptly.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">38. Privacy Policy</h3>
+            <p>Your use of our services is also governed by our Privacy Policy, which outlines how we collect, use, and protect your personal information. Please review it carefully.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">39. Acknowledgment</h3>
+            <p>You acknowledge that you have read these Terms and Conditions and understand them. By using our services, you agree to be bound by these terms.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">40. Contact Information</h3>
+            <p>If you have any questions about these Terms or our services, please contact us at:</p>
+            <p>371 7th Ave, New York, NY 10001</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="text-center">
+            <p class="text-lg">Visit us at:</p>
+            <p class="text-xl font-bold">371 7th Ave, New York, NY 10001</p>
+            <p class="text-lg">Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+</body>
+</html>

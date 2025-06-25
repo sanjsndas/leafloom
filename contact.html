@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Leafloom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #3a7d44;
+            --secondary: #d4af37;
+            --accent: #6b8e23;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('p1.jpeg');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .content-section {
+            column-count: 2;
+            column-gap: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .content-section {
+                column-count: 1;
+            }
+        }
+        
+        .leaf-decoration {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%233a7d44' d='M480 0c-17.7 0-32 14.3-32 32c0 41.7-52.5 80-128 80s-128-38.3-128-80c0-17.7-14.3-32-32-32s-32 14.3-32 32c0 61.9 50.1 112 112 112c47.4 0 87.7-29.4 103.8-70.6C296.3 143.4 320 171.2 320 208c0 44.2-35.8 80-80 80H160c-17.7 0-32 14.3-32 32s14.3 32 32 32h80c79.5 0 144-64.5 144-144c0-40.2-16.6-76.6-43.4-103.1C434.9 86.4 480 57.1 480 32c0-17.7-14.3-32-32-32z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .leaf-decoration.top-left {
+            top: 50px;
+            left: 50px;
+            transform: rotate(-15deg);
+        }
+        
+        .leaf-decoration.bottom-right {
+            bottom: 50px;
+            right: 50px;
+            transform: rotate(165deg);
+        }
+        
+        .contact-form {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .form-textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .form-submit:hover {
+            background-color: #2d6335;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-green-700">Leafloom</span>
+                    <span class="ml-2 text-sm text-yellow-600 italic">Woven in green.</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Home</a>
+                        <a href="privacy.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Privacy</a>
+                        <a href="terms.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Terms & Conditions</a>
+                        <a href="cookies.html" class="nav-link text-gray-700 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300" tabindex="0">Cookies</a>
+                        <a href="contact.html" class="nav-link text-green-700 font-bold px-3 py-2 rounded-md text-sm font-medium transition duration-300" aria-current="page" tabindex="0">Contact Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-green-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero flex items-center justify-center text-center text-white relative">
+        <div class="leaf-decoration top-left"></div>
+        <div class="leaf-decoration bottom-right"></div>
+        <div class="px-4 py-16 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
+            <p class="text-xl md:text-2xl mb-8">We'd love to hear from you</p>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="contact-form">
+            <h2 class="text-3xl font-bold mb-8 text-center">Send Us a Message</h2>
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block mb-2">Full Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Your name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="Your email" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="subject" class="block mb-2">Subject</label>
+                    <input type="text" id="subject" class="form-input" placeholder="Subject of your message">
+                </div>
+                <div>
+                    <label for="message" class="block mb-2">Your Message</label>
+                    <textarea id="message" class="form-input form-textarea" placeholder="Your message here" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="form-submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="content-section">
+            <h2 class="text-3xl font-bold mb-6">Contact Information</h2>
+            <p>At Leafloom, we value your questions, comments, and feedback. Below you'll find comprehensive information about how to reach us, our business hours, and various ways to connect with our team.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">1. Our Headquarters</h3>
+            <p>Our main office is located in the heart of New York City. Visitors are welcome by appointment only. Please call ahead to schedule a visit so we can ensure someone is available to assist you.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">2. Business Hours</h3>
+            <p>Our standard business hours are Monday through Friday, 9:00 AM to 6:00 PM EST. We are closed on major holidays. For urgent matters outside these hours, please leave a message and we'll respond as soon as possible.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">3. Phone Support</h3>
+            <p>Our customer service team is available during business hours at (123) 456-7890. For faster service, have your account information ready when you call. International customers may contact us through our international number.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">4. Email Support</h3>
+            <p>For non-urgent inquiries, email us at info@leafloom.com. We typically respond within 24-48 hours. Please include detailed information about your question or concern to help us serve you better.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">5. Mailing Address</h3>
+            <p>For written correspondence, please send mail to: Leafloom, 371 7th Ave, New York, NY 10001. Please allow 5-7 business days for processing of mailed inquiries.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">6. Social Media</h3>
+            <p>Connect with us on social media for the latest updates and announcements. We're active on Facebook, Instagram, Twitter, and LinkedIn. Social media messages are typically answered within 48 hours.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">7. Emergency Contact</h3>
+            <p>For urgent matters requiring immediate attention outside of business hours, please call our emergency line at (123) 456-7891. This line is monitored 24/7 for critical issues only.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">8. Customer Support</h3>
+            <p>Our dedicated customer support team is trained to handle all your inquiries. They can assist with account questions, service information, billing inquiries, and general company information.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">9. Technical Support</h3>
+            <p>For technical issues with our website or services, please contact our technical support team at support@leafloom.com. Include detailed information about the problem you're experiencing.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">10. Sales Inquiries</h3>
+            <p>Interested in our services? Contact our sales team at sales@leafloom.com or call (123) 456-7892. Our representatives can provide detailed information about our offerings and pricing.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">11. Press Inquiries</h3>
+            <p>Members of the press should direct all inquiries to our PR department at press@leafloom.com. Please include your name, media outlet, deadline, and the nature of your request.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">12. Partnership Opportunities</h3>
+            <p>For business partnership inquiries, please contact partnerships@leafloom.com. Include information about your organization and the nature of the potential partnership.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">13. Investor Relations</h3>
+            <p>Investors and analysts can reach our investor relations team at investors@leafloom.com. We welcome inquiries about our financial performance and business strategy.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">14. Career Opportunities</h3>
+            <p>Interested in joining our team? Visit our careers page or email your resume to careers@leafloom.com. Please specify the position you're applying for in the subject line.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">15. Feedback & Suggestions</h3>
+            <p>We value your feedback. Share your thoughts and suggestions at feedback@leafloom.com. Your input helps us improve our products and services.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">16. Complaints Resolution</h3>
+            <p>If you have a complaint about our services, please contact complaints@leafloom.com. We take all complaints seriously and will work to resolve them promptly.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">17. Accessibility Support</h3>
+            <p>For assistance with accessibility issues, please contact accessibility@leafloom.com. We're committed to making our services accessible to all customers.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">18. International Contacts</h3>
+            <p>We have representatives in several countries. Visit our international contacts page for local phone numbers and email addresses in your region.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">19. Franchise Inquiries</h3>
+            <p>Interested in franchising opportunities? Contact franchise@leafloom.com for information about our franchise program and application process.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">20. Wholesale Inquiries</h3>
+            <p>For wholesale purchasing information, please contact wholesale@leafloom.com. Include details about your business and purchasing needs.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">21. Community Relations</h3>
+            <p>For community partnership and sponsorship requests, please contact community@leafloom.com. We review all requests but cannot guarantee fulfillment.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">22. Legal Department</h3>
+            <p>Legal notices and correspondence should be directed to legal@leafloom.com or mailed to our headquarters with "Legal Department" in the address line.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">23. Billing Questions</h3>
+            <p>For questions about invoices or payments, contact billing@leafloom.com. Please include your account number and invoice details for faster service.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">24. Website Help</h3>
+            <p>Experiencing issues with our website? Contact webmaster@leafloom.com. Describe the problem and include screens hots if possible to help us resolve the issue quickly.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">25. Product Information</h3>
+            <p>For inquiries about specific products, please reach out to productinfo@leafloom.com. Our team can provide detailed specifications and availability.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">26. Event Participation</h3>
+            <p>If you would like to invite us to an event or collaborate on a project, please contact events@leafloom.com. We appreciate opportunities to engage with our community.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">27. Sponsorship Requests</h3>
+            <p>For sponsorship inquiries, please email sponsorships@leafloom.com. Include details about the event and the benefits of sponsorship for our company.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">28. Research Collaborations</h3>
+            <p>Academics and researchers interested in collaborating with us can reach out at research@leafloom.com. We are open to innovative ideas and partnerships.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">29. Customer Testimonials</h3>
+            <p>We love hearing from our customers! Share your experience with us at testimonials@leafloom.com. Your feedback may be featured on our website.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">30. User Guides and Manuals</h3>
+            <p>For assistance with user guides or manuals, please contact support@leafloom.com. We can provide digital copies or answer specific questions.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">31. Product Returns</h3>
+            <p>For information on returning products, please reach out to returns@leafloom.com. Include your order number and reason for return for a smooth process.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">32. Loyalty Program</h3>
+            <p>Questions about our loyalty program can be directed to loyalty@leafloom.com. We can provide details on how to earn and redeem points.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">33. Gift Cards</h3>
+            <p>For inquiries regarding gift cards, please contact giftcards@leafloom.com. We can assist with purchasing, redeeming, and checking balances.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">34. Affiliate Program</h3>
+            <p>Interested in joining our affiliate program? Contact affiliates@leafloom.com for more information on how to get started.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">35. Environmental Initiatives</h3>
+            <p>For questions about our sustainability efforts, please reach out to sustainability@leafloom.com. We are committed to eco-friendly practices.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">36. Community Engagement</h3>
+            <p>For inquiries about community engagement and outreach programs, please contact community@leafloom.com. We love to support local initiatives.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">37. Product Customization</h3>
+            <p>For information on customizing our products, please reach out to customization@leafloom.com. We can discuss options and pricing.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">38. Warranty Information</h3>
+            <p>For warranty inquiries, please contact warranty@leafloom.com. We can provide details on coverage and claims processes.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">39. Product Availability</h3>
+            <p>For questions about product availability, please reach out to availability@leafloom.com. We can provide updates on stock and restock dates.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">40. Final Thoughts</h3>
+            <p>We appreciate your interest in Leafloom. Your inquiries are important to us, and we look forward to assisting you with any questions or concerns you may have.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="text-center">
+            <p class="text-lg">Visit us at:</p>
+            <p class="text-xl font-bold">371 7th Ave, New York, NY 10001</p>
+            <p class="text-lg">Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+</body>
+</html>
